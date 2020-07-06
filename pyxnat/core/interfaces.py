@@ -268,8 +268,8 @@ class Interface(object):
                 self._jsession = 'JSESSIONID=' + self._exec('/data/JSESSION', force_preemptive_auth=True)
                 self._entry = '/data'
 
-		LOGGER.warn("pyxnat get_entry:%s" % self._jsession)
-                print("pyxnat:%s" % self._jsession)
+		#LOGGER.warn("pyxnat get_entry:%s" % self._jsession)
+                #print("pyxnat:%s" % self._jsession)
                 if is_xnat_error(self._jsession):
                     catch_error(self._jsession)
             except Exception as e:
@@ -363,9 +363,9 @@ class Interface(object):
 	
         # SHUNXING FOR debugging
         
-	if 'JSESSION' in str(uri):
-	    LOGGER.warn("SHUNXING %s URI: %s; JSESSION:%s" % (method,str(uri),self._jsession))
-	    print('%s URI: %s; JSESSION:%s' % (method,str(uri),self._jsession))
+	#if 'JSESSION' in str(uri):
+	#    LOGGER.warn("SHUNXING %s URI: %s; JSESSION:%s" % (method,str(uri),self._jsession))
+	#    print('%s URI: %s; JSESSION:%s' % (method,str(uri),self._jsession))
         #LOGGER.warn('SHUNXING URI:%s' % str(uri))
 
         if DEBUG:
